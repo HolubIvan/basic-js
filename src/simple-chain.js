@@ -1,24 +1,26 @@
-const chainMaker = {
-  getLength() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  },
-  addLink(value) {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  },
-  removeLink(position) {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  },
-  reverseChain() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  },
-  finishChain() {
-    throw 'Not implemented';
-    // remove line with error and write your code here
-  }
-};
+// const chainMaker = {
 
-module.exports = chainMaker;
+//   chain: [],
+
+//   getLength() {
+    
+//   },
+//   addLink(value) {
+//     this.chain.push(value);
+//   },
+//   removeLink(position) {
+//     return this.chain.forEach(function(el){
+//       if(el == value){
+        
+//       }
+//     })
+//   },
+//   reverseChain() {
+    
+//   },
+//   finishChain() {
+    
+//   }
+// };
+
+// module.exports = chainMaker;
