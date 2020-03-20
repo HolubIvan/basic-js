@@ -1,26 +1,39 @@
-// const chainMaker = {
+const chainMaker = {
 
-//   chain: [],
+  chain: [],
 
-//   getLength() {
+  getLength() {
+    return this.chain.length;
+  },
+  addLink(value) {
     
-//   },
-//   addLink(value) {
-//     this.chain.push(value);
-//   },
-//   removeLink(position) {
-//     return this.chain.forEach(function(el){
-//       if(el == value){
-        
-//       }
-//     })
-//   },
-//   reverseChain() {
+        this.chain.push(value);
+        return this;
     
-//   },
-//   finishChain() {
-    
-//   }
-// };
+  },
+  removeLink(position) {
+    if(isNaN(+position) || position == '' || this.chain[position] === undefined){
+        this.chain = [];
+        throw new Error();
+    }
 
-// module.exports = chainMaker;
+    this.chain.splice(position - 1, 1);
+    return this;
+  },
+  reverseChain() {
+    this.chain.reverse()
+    return this;
+  },
+  finishChain() {
+    let chainedString = '';
+    
+    this.chain.map( (element, i) => {
+      chainedString += (i == 0) ? `( ${element} )` : `~~( ${element} )`;
+    });
+    this.chain = [];
+    return chainedString;
+
+  }
+};
+
+module.exports = chainMaker;
